@@ -1,0 +1,155 @@
+/*reset*/
+body{
+	margin: 0;
+}
+h1{
+	margin:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+@media screen and (max-width:639px) {
+/*スマホ用のcssを記述*/
+.mv_wrapper{
+	width: 100%;
+	height: 100vh;
+	color: rgba(0,0,0,0.84);
+}
+h1{
+	position: absolute;
+	top: 75vw;
+	left: 20vw;
+	z-index: 2;
+}
+.side_lines{
+	position: absolute;
+	width: 30vw;
+	height: 30vw;
+	z-index: 2;
+}
+.mv_nav{
+	position: absolute;
+    bottom: 5vw;
+    right: 10vw;
+    z-index: 2;
+}
+.mv_nav_li{
+	color: rgba(0,0,0,0.84);
+	margin: 2vw 0;
+}
+.mv_nav_li_1{
+	margin-left: 25vw;
+}
+.mv_nav_li_2{
+	margin-left: 18vw;
+}
+.mv_nav_li_3{
+	margin-left: 11vw;
+}
+.mv_nav_li_4{
+	margin-left: 4vw;
+}
+.mv_nav_li_5{
+	margin-left: -3vw;
+}
+
+}
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+/*tablet用のcssを記述*/
+}
+  
+@media screen and (min-width:1024px) {
+/*pc用のcssを記述*/
+.mv_wrapper{
+	width: 1000px;
+	margin: 0 auto 100px;
+	border: solid;
+	position: relative;
+	height: 600px;
+}
+h1{
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	z-index: 2;
+}
+.side_lines{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	z-index: 2;
+}
+.mv_nav{
+	display: none;
+}
+
+}
+
+.left_lines_block{
+	top: 0;
+	left: 0;
+}
+.right_lines_block{
+	bottom: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+.line{
+	stroke-width: 5px;
+	stroke-dashoffset: 435px;
+	stroke-dasharray: 435px;
+}
+.left_line{
+	stroke: #009380;
+	animation: line_animation_left .5s cubic-bezier(0,0,.87,.28);
+	animation-fill-mode: forwards;
+}
+.middle_line{
+	stroke: #009380cc;
+	animation: line_animation_middle .5s cubic-bezier(0,0,.87,.28);
+	animation-fill-mode: forwards;
+}
+.right_line{
+	stroke: #00938070;
+	animation: line_animation_right .5s cubic-bezier(0,0,.87,.28);
+	animation-fill-mode: forwards;
+}
+
+@keyframes line_animation_left{
+	0%{
+		stroke-dashoffset: 435px;
+	}
+	100%{
+		stroke-dashoffset: 0px;
+	}
+}
+@keyframes line_animation_middle{
+	20%{
+		stroke-dashoffset: 435px;
+	}
+	100%{
+		stroke-dashoffset: 0px;
+	}
+}
+@keyframes line_animation_right{
+	40%{
+		stroke-dashoffset: 435px;
+	}
+	100%{
+		stroke-dashoffset: 0px;
+	}
+}
+
+#canvas{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}

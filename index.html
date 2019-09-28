@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>MV animation</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-	<div>aaa</div>
+	<div id="mv_wrapper" class="mv_wrapper">
+
+		<canvas id="canvas"></canvas>
+
+		<div class="side_lines left_lines_block">
+			<svg width="300px" height="300px">
+			  <line x1="0" y1="270" x2="300" y2="0" class="left_line line" />
+			  <line x1="0" y1="285" x2="300" y2="15" class="middle_line line" />
+			  <line x1="0" y1="300" x2="300" y2="30" class="right_line line" />
+			</svg>
+		</div>
+
+		<h1>タイトル</h1>
+
+		<ul id="mv_nav" class="mv_nav">
+			<a href=""><li class="mv_nav_li mv_nav_li_1">コンテンツ1</li></a>
+			<a href=""><li class="mv_nav_li mv_nav_li_2">コンテンツ2</li></a>
+			<a href=""><li class="mv_nav_li mv_nav_li_3">コンテンツ3</li></a>
+			<a href=""><li class="mv_nav_li mv_nav_li_4">コンテンツ4</li></a>
+			<a href=""><li class="mv_nav_li mv_nav_li_5">コンテンツ5</li></a>
+		</ul>
+
+		<div class="side_lines right_lines_block">
+			<svg width="300px" height="300px">
+			  <line x1="0" y1="270" x2="300" y2="0" class="right_line line" />
+			  <line x1="0" y1="285" x2="300" y2="15" class="middle_line line" />
+			  <line x1="0" y1="300" x2="300" y2="30" class="left_line line" />
+			</svg>
+		</div>
+
+	</div>
 </body>
 </html>
+<script type="text/javascript" src="js/index.js"></script>
