@@ -128,3 +128,45 @@ window.onresize = function(){
 	canvas.height = window.innerHeight;
 	animate();
 };
+
+//show title and navigation
+$(function(){
+	var title = 'タイトル　　タイトル'
+	var split = title.split('');
+	var characters = [];
+	for (var i = 0; i < split.length; i++){
+		var character = '<span class="title_char">' + split[i] + '</span>';
+		characters.push(character);
+		if(i == 4){
+			$("h1").append("<br>");
+			$("h1").append(character);
+		}else{
+			$("h1").append(character);
+		}
+	}
+	
+	var j = 0;
+	function showCharacters(){
+		$(".title_char").eq(j).css("opacity", 1);
+	}
+	setInterval(function(){
+		if(j < split.length){
+			showCharacters();
+			j++;
+		}
+	},50);
+
+	var k = 0;
+	function showNavigation(){
+		$(".mv_nav_li").eq(k).css("opacity", 1);
+	}
+	setTimeout(function(){
+		setInterval(function(){
+			if(k < 4){
+				showNavigation();
+				console.log(k);
+				k++;
+			}
+		}, 50);
+	}, 800);
+});
